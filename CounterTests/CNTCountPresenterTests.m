@@ -6,11 +6,11 @@
 //
 
 // Class under test
-#import "CNTCountPresenter.h"
+#import "CNTCounterPresenter.h"
 
 // Collaborators
-#import "CNTCountView.h"
-#import "CNTCountInteractorIO.h"
+#import "CNTCounterProtocols.h"
+#import "CNTCounterInteractor.h"
 
 // Test support
 #import <XCTest/XCTest.h>
@@ -20,9 +20,9 @@
 
 
 @interface CNTCountPresenterTests : XCTestCase
-@property (nonatomic, strong)   CNTCountPresenter*          presenter;
-@property (nonatomic, strong)   id<CNTCountView>            view;
-@property (nonatomic, strong)   id<CNTCountInteractorInput> interactor;
+@property (nonatomic, strong)   CNTCounterPresenter*          presenter;
+@property (nonatomic, strong)   id<CNTCounterViewProtocol>            view;
+@property (nonatomic, strong)   CNTCounterInteractor *interactor;
 @end
 
 
@@ -32,12 +32,12 @@
 {
     [super setUp];
     
-    self.presenter = [[CNTCountPresenter alloc] init];
+    self.presenter = [[CNTCounterPresenter alloc] init];
     
-    self.view = mockProtocol(@protocol(CNTCountView));
+    self.view = mockProtocol(@protocol(CNTCounterViewProtocol));
     self.presenter.view = self.view;
     
-    self.interactor = mockProtocol(@protocol(CNTCountInteractorInput));
+    self.interactor = mock([CNTCounterInteractor class]);
     self.presenter.interactor = self.interactor;
 }
 
@@ -46,13 +46,13 @@
 {
     [self.presenter updateView];
     
-    [verify(self.interactor) requestCount];
+    [verify(self.interactor) requestCountUpdate];
 }
 
 
 - (void)testIncrementRequestsInteractorIncrement
 {
-	[self.presenter increment];
+	[self.presenter requestIncrementCount];
     
     [verify(self.interactor) increment];
 }
@@ -60,7 +60,7 @@
 
 - (void)testDecrementRequestsInteractorDecrement
 {
-	[self.presenter decrement];
+	[self.presenter requestDecrementCount];
     
     [verify(self.interactor) decrement];
 }
@@ -82,19 +82,26 @@
 }
 
 
-- (void)testReceivingZeroDisablesDecrement
-{
-    [self.presenter updateCount:0];
-    
-    [verify(self.view) setDecrementEnabled:NO];
-}
-
-
-- (void)testReceivingOneEnablesDecrement
-{
-    [self.presenter updateCount:1];
-    
-    [verify(self.view) setDecrementEnabled:YES];
-}
+//- (void)testReceivingZeroDisablesDecrement
+//{
+//    [given([self.interactor canDecrementCount:1]) willReturnBool:NO];
+//    
+//    [self.presenter updateCount:0];
+//    
+//    [verify(self.view) setDecrementEnabled:NO];
+//}
+//
+//
+//- (void)testReceivingOneEnablesDecrement
+//{
+//    
+//    [given([self.interactor canDecrementCount:1]) willReturnBool:YES];
+//    
+//    NSLog(@"%d", [self.interactor canDecrementCount:1]);
+//    
+//    [self.presenter updateCount:1];
+//    
+//    [verify(self.view) setDecrementEnabled:YES];
+//}
 
 @end

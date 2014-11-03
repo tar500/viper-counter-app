@@ -6,10 +6,10 @@
 //
 
 // Class under test
-#import "CNTCountViewController.h"
+#import "CNTCounterViewController.h"
 
 // Collaborators
-#import "CNTCountPresenter.h"
+#import "CNTCounterPresenter.h"
 
 // Test support
 #import <XCTest/XCTest.h>
@@ -26,8 +26,8 @@
 
 
 @interface CNTCountViewControllerTests : XCTestCase
-@property (nonatomic, strong)   CNTCountViewController* view;
-@property (nonatomic, strong)   CNTCountPresenter*      presenter;
+@property (nonatomic, strong)   CNTCounterViewController* view;
+@property (nonatomic, strong)   CNTCounterPresenter*      presenter;
 @end
 
 
@@ -37,10 +37,10 @@
 {
     [super setUp];
     
-    self.view = [[CNTCountViewController alloc] init];
+    self.view = [[CNTCounterViewController alloc] init];
     [self.view view];   // force the view to load
     
-    self.presenter = mock([CNTCountPresenter class]);
+    self.presenter = mock([CNTCounterPresenter class]);
     self.view.presenter = self.presenter;
 }
 
@@ -98,7 +98,7 @@
 {
     [self tapButton:self.view.incrementButton];
 
-    [verify(self.presenter) increment];
+    [verify(self.presenter) requestIncrementCount];
 }
 
 
@@ -106,7 +106,7 @@
 {
     [self tapButton:self.view.decrementButton];
     
-    [verify(self.presenter) decrement];
+    [verify(self.presenter) requestDecrementCount];
 }
 
 

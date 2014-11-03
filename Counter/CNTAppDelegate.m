@@ -7,9 +7,7 @@
 //
 
 #import "CNTAppDelegate.h"
-#import "CNTCountInteractor.h"
-#import "CNTCountPresenter.h"
-#import "CNTCountViewController.h"
+#import "CNTCounterWireframe.h"
 
 
 @implementation CNTAppDelegate
@@ -28,17 +26,9 @@
 
 - (void)createScreen
 {
-	CNTCountViewController* view = [[CNTCountViewController alloc] init];
-	CNTCountPresenter* presenter = [[CNTCountPresenter alloc] init];
-	CNTCountInteractor* interactor = [[CNTCountInteractor alloc] init];
+    CNTCounterWireframe * wireframe = [CNTCounterWireframe new];
+    [wireframe presentFromWindow:self.window];
 
-    view.presenter = presenter;
-    presenter.view = view;
-    
-    presenter.interactor = interactor;
-    interactor.output = presenter;
-	
-	self.window.rootViewController = view;
 }
 
 @end

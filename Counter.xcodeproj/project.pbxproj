@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3AFAD3D59D9347F6ABD5274B /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 97252028FD0644648F55C910 /* libPods-Tests.a */; };
-		CF0DB9AC17C7D9FF0062B5F6 /* CNTCountPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DB9AB17C7D9FF0062B5F6 /* CNTCountPresenter.m */; };
-		CF0DB9B217C837B40062B5F6 /* CNTCountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DB9B117C837B40062B5F6 /* CNTCountViewController.m */; };
-		CF0DB9B417C839E90062B5F6 /* CNTCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF0DB9B317C839E90062B5F6 /* CNTCountViewController.xib */; };
+		5726DCF01A07E584005EB3A2 /* CNTCounterDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5726DCE21A07E584005EB3A2 /* CNTCounterDataManager.m */; };
+		5726DCF11A07E584005EB3A2 /* CNTCounterInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 5726DCE51A07E584005EB3A2 /* CNTCounterInteractor.m */; };
+		5726DCF21A07E584005EB3A2 /* CNTCounterPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 5726DCE71A07E584005EB3A2 /* CNTCounterPresenter.m */; };
+		5726DCF31A07E584005EB3A2 /* CNTCounterWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 5726DCE91A07E584005EB3A2 /* CNTCounterWireframe.m */; };
+		5726DCF41A07E584005EB3A2 /* CNTCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5726DCEE1A07E584005EB3A2 /* CNTCounterViewController.m */; };
+		5726DCF51A07E584005EB3A2 /* CNTCounterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5726DCEF1A07E584005EB3A2 /* CNTCounterViewController.xib */; };
 		CF6FA881197AD41300B2B172 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6FA87A197AD02100B2B172 /* XCTest.framework */; };
 		CF6FA882197AD41300B2B172 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBFC3AE17C6A41D00004DE1 /* Foundation.framework */; };
 		CF6FA883197AD41300B2B172 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFBFC3AC17C6A41D00004DE1 /* UIKit.framework */; };
@@ -27,7 +30,6 @@
 		CFBFC3BF17C6A41D00004DE1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBFC3BE17C6A41D00004DE1 /* Default.png */; };
 		CFBFC3C117C6A41D00004DE1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBFC3C017C6A41D00004DE1 /* Default@2x.png */; };
 		CFBFC3C317C6A41D00004DE1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFBFC3C217C6A41D00004DE1 /* Default-568h@2x.png */; };
-		CFBFC3EC17C6A89700004DE1 /* CNTCountInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = CFBFC3EB17C6A89700004DE1 /* CNTCountInteractor.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,15 +43,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5726DCE11A07E584005EB3A2 /* CNTCounterDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTCounterDataManager.h; sourceTree = "<group>"; };
+		5726DCE21A07E584005EB3A2 /* CNTCounterDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTCounterDataManager.m; sourceTree = "<group>"; };
+		5726DCE41A07E584005EB3A2 /* CNTCounterInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTCounterInteractor.h; sourceTree = "<group>"; };
+		5726DCE51A07E584005EB3A2 /* CNTCounterInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTCounterInteractor.m; sourceTree = "<group>"; };
+		5726DCE61A07E584005EB3A2 /* CNTCounterPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTCounterPresenter.h; sourceTree = "<group>"; };
+		5726DCE71A07E584005EB3A2 /* CNTCounterPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTCounterPresenter.m; sourceTree = "<group>"; };
+		5726DCE81A07E584005EB3A2 /* CNTCounterWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTCounterWireframe.h; sourceTree = "<group>"; };
+		5726DCE91A07E584005EB3A2 /* CNTCounterWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTCounterWireframe.m; sourceTree = "<group>"; };
+		5726DCEB1A07E584005EB3A2 /* CNTCounterProtocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTCounterProtocols.h; sourceTree = "<group>"; };
+		5726DCED1A07E584005EB3A2 /* CNTCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTCounterViewController.h; sourceTree = "<group>"; };
+		5726DCEE1A07E584005EB3A2 /* CNTCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTCounterViewController.m; sourceTree = "<group>"; };
+		5726DCEF1A07E584005EB3A2 /* CNTCounterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CNTCounterViewController.xib; sourceTree = "<group>"; };
 		97252028FD0644648F55C910 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF0DB9A817C7D9B20062B5F6 /* CNTCountPresenterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNTCountPresenterTests.m; path = ../CounterTests/CNTCountPresenterTests.m; sourceTree = "<group>"; };
-		CF0DB9AA17C7D9FF0062B5F6 /* CNTCountPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTCountPresenter.h; sourceTree = "<group>"; };
-		CF0DB9AB17C7D9FF0062B5F6 /* CNTCountPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTCountPresenter.m; sourceTree = "<group>"; };
-		CF0DB9AD17C7DB770062B5F6 /* CNTCountView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNTCountView.h; sourceTree = "<group>"; };
 		CF0DB9AE17C837390062B5F6 /* CNTCountViewControllerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNTCountViewControllerTests.m; path = ../CounterTests/CNTCountViewControllerTests.m; sourceTree = "<group>"; };
-		CF0DB9B017C837B40062B5F6 /* CNTCountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTCountViewController.h; sourceTree = "<group>"; };
-		CF0DB9B117C837B40062B5F6 /* CNTCountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTCountViewController.m; sourceTree = "<group>"; };
-		CF0DB9B317C839E90062B5F6 /* CNTCountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CNTCountViewController.xib; sourceTree = "<group>"; };
 		CF6FA87A197AD02100B2B172 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		CF6FA880197AD41300B2B172 /* Counter Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Counter Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6FA886197AD41300B2B172 /* Counter Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Counter Tests-Info.plist"; sourceTree = "<group>"; };
@@ -69,9 +77,6 @@
 		CFBFC3C017C6A41D00004DE1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CFBFC3C217C6A41D00004DE1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		CFBFC3E717C6A63500004DE1 /* CNTCountInteractorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CNTCountInteractorTests.m; path = ../CounterTests/CNTCountInteractorTests.m; sourceTree = "<group>"; };
-		CFBFC3EA17C6A89700004DE1 /* CNTCountInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNTCountInteractor.h; sourceTree = "<group>"; };
-		CFBFC3EB17C6A89700004DE1 /* CNTCountInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNTCountInteractor.m; sourceTree = "<group>"; };
-		CFBFC3EF17C6A9E500004DE1 /* CNTCountInteractorIO.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNTCountInteractorIO.h; sourceTree = "<group>"; };
 		F4DA1622EB34456CA7BE5285 /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -100,6 +105,57 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5726DCDF1A07E584005EB3A2 /* Counter */ = {
+			isa = PBXGroup;
+			children = (
+				5726DCE01A07E584005EB3A2 /* DataManager */,
+				5726DCE31A07E584005EB3A2 /* Logic */,
+				5726DCEA1A07E584005EB3A2 /* Protocols */,
+				5726DCEC1A07E584005EB3A2 /* View */,
+			);
+			path = Counter;
+			sourceTree = "<group>";
+		};
+		5726DCE01A07E584005EB3A2 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				5726DCE11A07E584005EB3A2 /* CNTCounterDataManager.h */,
+				5726DCE21A07E584005EB3A2 /* CNTCounterDataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		5726DCE31A07E584005EB3A2 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				5726DCE41A07E584005EB3A2 /* CNTCounterInteractor.h */,
+				5726DCE51A07E584005EB3A2 /* CNTCounterInteractor.m */,
+				5726DCE61A07E584005EB3A2 /* CNTCounterPresenter.h */,
+				5726DCE71A07E584005EB3A2 /* CNTCounterPresenter.m */,
+				5726DCE81A07E584005EB3A2 /* CNTCounterWireframe.h */,
+				5726DCE91A07E584005EB3A2 /* CNTCounterWireframe.m */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		5726DCEA1A07E584005EB3A2 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				5726DCEB1A07E584005EB3A2 /* CNTCounterProtocols.h */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		5726DCEC1A07E584005EB3A2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5726DCED1A07E584005EB3A2 /* CNTCounterViewController.h */,
+				5726DCEE1A07E584005EB3A2 /* CNTCounterViewController.m */,
+				5726DCEF1A07E584005EB3A2 /* CNTCounterViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CF6FA884197AD41300B2B172 /* Counter Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				CFBFC3B217C6A41D00004DE1 /* Counter */,
-				CFBFC3D617C6A41D00004DE1 /* CounterTests */,
 				CF6FA884197AD41300B2B172 /* Counter Tests */,
 				CFBFC3AB17C6A41D00004DE1 /* Frameworks */,
 				CFBFC3AA17C6A41D00004DE1 /* Products */,
@@ -157,17 +212,9 @@
 		CFBFC3B217C6A41D00004DE1 /* Counter */ = {
 			isa = PBXGroup;
 			children = (
+				5726DCDF1A07E584005EB3A2 /* Counter */,
 				CFBFC3BB17C6A41D00004DE1 /* CNTAppDelegate.h */,
 				CFBFC3BC17C6A41D00004DE1 /* CNTAppDelegate.m */,
-				CFBFC3EF17C6A9E500004DE1 /* CNTCountInteractorIO.h */,
-				CFBFC3EA17C6A89700004DE1 /* CNTCountInteractor.h */,
-				CFBFC3EB17C6A89700004DE1 /* CNTCountInteractor.m */,
-				CF0DB9AA17C7D9FF0062B5F6 /* CNTCountPresenter.h */,
-				CF0DB9AB17C7D9FF0062B5F6 /* CNTCountPresenter.m */,
-				CF0DB9AD17C7DB770062B5F6 /* CNTCountView.h */,
-				CF0DB9B017C837B40062B5F6 /* CNTCountViewController.h */,
-				CF0DB9B117C837B40062B5F6 /* CNTCountViewController.m */,
-				CF0DB9B317C839E90062B5F6 /* CNTCountViewController.xib */,
 				CFBFC3B317C6A41D00004DE1 /* Supporting Files */,
 			);
 			path = Counter;
@@ -185,13 +232,6 @@
 				CFBFC3C217C6A41D00004DE1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		CFBFC3D617C6A41D00004DE1 /* CounterTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CounterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +324,7 @@
 				CFBFC3BF17C6A41D00004DE1 /* Default.png in Resources */,
 				CFBFC3C117C6A41D00004DE1 /* Default@2x.png in Resources */,
 				CFBFC3C317C6A41D00004DE1 /* Default-568h@2x.png in Resources */,
-				CF0DB9B417C839E90062B5F6 /* CNTCountViewController.xib in Resources */,
+				5726DCF51A07E584005EB3A2 /* CNTCounterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,9 +380,11 @@
 			files = (
 				CFBFC3B917C6A41D00004DE1 /* main.m in Sources */,
 				CFBFC3BD17C6A41D00004DE1 /* CNTAppDelegate.m in Sources */,
-				CFBFC3EC17C6A89700004DE1 /* CNTCountInteractor.m in Sources */,
-				CF0DB9AC17C7D9FF0062B5F6 /* CNTCountPresenter.m in Sources */,
-				CF0DB9B217C837B40062B5F6 /* CNTCountViewController.m in Sources */,
+				5726DCF41A07E584005EB3A2 /* CNTCounterViewController.m in Sources */,
+				5726DCF01A07E584005EB3A2 /* CNTCounterDataManager.m in Sources */,
+				5726DCF21A07E584005EB3A2 /* CNTCounterPresenter.m in Sources */,
+				5726DCF31A07E584005EB3A2 /* CNTCounterWireframe.m in Sources */,
+				5726DCF11A07E584005EB3A2 /* CNTCounterInteractor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

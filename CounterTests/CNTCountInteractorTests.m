@@ -6,7 +6,8 @@
 //
 
 // Class under test
-#import "CNTCountInteractor.h"
+#import "CNTCounterInteractor.h"
+#import "CNTCounterProtocols.h"
 
 // Test support
 #import <XCTest/XCTest.h>
@@ -18,8 +19,8 @@
 #define assertCountEquals(expected) assertThatUnsignedInteger(self.count, equalToUnsignedInteger(expected))
 
 
-@interface CNTCountInteractorTests : XCTestCase <CNTCountInteractorOutput>
-@property (nonatomic, strong)   id<CNTCountInteractorInput> interactor;
+@interface CNTCountInteractorTests : XCTestCase <CNTCounterInteractorOutputProtocol>
+@property (nonatomic, strong)   id<CNTCounterInteractorInputProtocol> interactor;
 @property (nonatomic, assign)   NSUInteger                  count;
 @end
 
@@ -30,7 +31,7 @@
 {
     [super setUp];
     
-    CNTCountInteractor* interactor = [[CNTCountInteractor alloc] init];
+    CNTCounterInteractor* interactor = [[CNTCounterInteractor alloc] init];
     interactor.output = self;
     self.interactor = interactor;
 }
@@ -40,7 +41,7 @@
 {
     self.count = 1;
     
-    [self.interactor requestCount];
+    [self.interactor requestCountUpdate];
     
     assertCountEquals(0);
 }
