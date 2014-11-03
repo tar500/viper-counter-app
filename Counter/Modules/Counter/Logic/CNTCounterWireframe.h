@@ -11,4 +11,6 @@
 
 - (void)presentFromWindow:(UIWindow *)window;
 
+- (void)presentSettings;
+
 @end

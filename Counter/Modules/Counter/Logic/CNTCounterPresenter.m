@@ -6,6 +6,8 @@
 #import "CNTCounterPresenter.h"
 #import "CNTCounterWireframe.h"
 
+#import "CNTSettingsDataManager.h"
+
 @interface CNTCounterPresenter()
 @property (nonatomic, strong)   NSNumberFormatter*  countFormatter;
 @end
@@ -41,6 +43,10 @@
     [self.interactor reset];
 }
 
+- (void)requestShowSettings {
+    [self.wireframe presentSettings];
+}
+
 
 #pragma mark - Interactor Output methods
 
@@ -71,7 +77,9 @@
     if (_countFormatter == nil)
     {
         _countFormatter = [[NSNumberFormatter alloc] init];
-        [_countFormatter setNumberStyle:NSNumberFormatterSpellOutStyle];
+        
+        [self setNumberStyle];
+
     }
     
     return _countFormatter;
@@ -79,7 +87,17 @@
 
 - (NSString*)formattedCount:(NSUInteger)count
 {
+    [self setNumberStyle];
+    
     return [self.countFormatter stringFromNumber:@(count)];
+}
+
+- (void)setNumberStyle {
+    if ([[CNTSettingsDataManager sharedManager] shouldDisplayNumbersAsWords]) {
+        [_countFormatter setNumberStyle:NSNumberFormatterSpellOutStyle];
+    } else {
+        [_countFormatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    }
 }
 
 @end

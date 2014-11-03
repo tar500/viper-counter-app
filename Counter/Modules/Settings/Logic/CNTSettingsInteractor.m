@@ -20,6 +20,13 @@
  * Make calls to output when needed
  */
 
+- (void)setDisplayNumbersAsWordsSettingValue:(BOOL)value {
+    [self.dataManager setShouldDisplayNumbersAsWords:value];
+}
+
+- (void)requestSettingsUpdate {
+    [self.output updateDisplayNumbersAsWordsSettingValue:self.dataManager.shouldDisplayNumbersAsWords];
+}
 
 #pragma mark - Private methods
 

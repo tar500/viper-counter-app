@@ -10,6 +10,7 @@
 #import "CNTCounterWireframe.h"
 #import "CNTCounterDataManager.h"
 
+#import "CNTSettingsWireframe.h"
 
 @interface CNTCounterWireframe()
 @property (nonatomic, strong) CNTCounterPresenter *presenter;
@@ -52,6 +53,16 @@
     //TOODO - New view controller presentation (present, push, pop, .. )
     
     [window setRootViewController:self.view];
+    
+}
+
+
+#pragma mark - Navigation to other views
+
+- (void)presentSettings {
+    
+    CNTSettingsWireframe * settingsWireframe = [[CNTSettingsWireframe alloc] init];
+    [settingsWireframe presentFromViewController:self.view];
     
 }
 

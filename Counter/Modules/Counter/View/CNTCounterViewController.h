@@ -19,6 +19,6 @@
 @property (nonatomic, weak) IBOutlet UILabel *countLabel;
 @property (nonatomic, weak) IBOutlet UIButton *decrementButton;
 @property (nonatomic, weak) IBOutlet UIButton *incrementButton;
-@property (weak, nonatomic) IBOutlet UIButton *resetButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *resetButton;
 
 @end

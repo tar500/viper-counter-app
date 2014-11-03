@@ -72,8 +72,16 @@
     [self.presenter requestDecrementCount];
 }
 
-- (IBAction)resetAction:(id)sender {
+
+- (IBAction)resetAction:(id)sender
+{
     [self.presenter requestResetCount];
+}
+
+
+- (IBAction)showSettingsAction:(id)sender
+{
+    [self.presenter requestShowSettings];
 }
 
 

@@ -10,7 +10,7 @@
                 <outlet property="countLabel" destination="T5R-sn-35A" id="Brm-se-lhd"/>
                 <outlet property="decrementButton" destination="aUK-je-cTr" id="nrv-hP-WKe"/>
                 <outlet property="incrementButton" destination="XxU-nr-EiB" id="lgy-5p-Fy9"/>
-                <outlet property="resetButton" destination="Vv0-tN-52b" id="Hxr-kq-O5D"/>
+                <outlet property="resetButton" destination="bRU-tD-7zK" id="WVX-fe-Lfg"/>
                 <outlet property="view" destination="Sej-5C-d8M" id="AFz-yx-39R"/>
             </connections>
         </placeholder>
@@ -20,8 +20,9 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aUK-je-cTr">
-                    <rect key="frame" x="20" y="142" width="102" height="44"/>
-                    <state key="normal" title="Decrement">
+                    <rect key="frame" x="8" y="446" width="102" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="--">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <state key="disabled">
@@ -32,33 +33,43 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XxU-nr-EiB">
-                    <rect key="frame" x="198" y="142" width="102" height="44"/>
-                    <state key="normal" title="Increment">
+                    <rect key="frame" x="198" y="446" width="102" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                    <state key="normal" title="++">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="increment:" destination="-1" eventType="touchUpInside" id="6sh-tv-JHA"/>
                     </connections>
                 </button>
+                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1va-wk-aaI">
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <items>
+                        <navigationItem title="Counter" id="ZDc-HS-KzO">
+                            <barButtonItem key="leftBarButtonItem" title="Reset" id="bRU-tD-7zK">
+                                <color key="tintColor" red="1" green="0.36701458850000002" blue="0.35338215490000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="-1" id="wjd-Qm-LlL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Settings" id="Etf-6J-src">
+                                <connections>
+                                    <action selector="showSettingsAction:" destination="-1" id="EUq-9q-LhM"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5R-sn-35A">
-                    <rect key="frame" x="20" y="44" width="280" height="63"/>
+                    <rect key="frame" x="20" y="221" width="280" height="63"/>
                     <fontDescription key="fontDescription" type="system" pointSize="30"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vv0-tN-52b">
-                    <rect key="frame" x="140" y="344" width="40" height="30"/>
-                    <state key="normal" title="Reset">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="resetAction:" destination="-1" eventType="touchUpInside" id="JNY-pL-tF1"/>
-                    </connections>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="435" y="217"/>
+            <point key="canvasLocation" x="461" y="230"/>
         </view>
     </objects>
 </document>

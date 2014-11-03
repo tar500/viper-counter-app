@@ -10,17 +10,24 @@
 /** PRESENTER -> VIEW */
 @protocol CNTSettingsViewProtocol
 
+- (void)setDisplayNumbersAsWordsEnabled:(BOOL)enabled;
+
 @end
 
 
 /** INTERACTOR -> PRESENTER */
 @protocol CNTSettingsInteractorOutputProtocol
 
+- (void)updateDisplayNumbersAsWordsSettingValue:(BOOL)value;
+
 @end
 
 
 /** PRESENTER -> INTERACTOR */
 @protocol CNTSettingsInteractorInputProtocol
+
+- (void)requestSettingsUpdate;
+- (void)setDisplayNumbersAsWordsSettingValue:(BOOL)value;
 
 @end
 

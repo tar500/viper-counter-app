@@ -18,4 +18,7 @@
 
 - (void)updateView;
 
+- (void)requestClose;
+- (void)changeDisplayNumbersAsWordsSettingValue:(BOOL)value;
+
 @end

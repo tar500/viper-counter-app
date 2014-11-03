@@ -22,4 +22,6 @@
 - (void)requestDecrementCount;
 - (void)requestResetCount;
 
+- (void)requestShowSettings;
+
 @end

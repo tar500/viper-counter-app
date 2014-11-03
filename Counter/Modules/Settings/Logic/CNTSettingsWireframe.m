@@ -32,7 +32,7 @@
     self.view = [[CNTSettingsViewController alloc] init];
     CNTSettingsPresenter *presenter = [CNTSettingsPresenter new];
     CNTSettingsInteractor *interactor = [CNTSettingsInteractor new];
-    CNTSettingsDataManager *dataManager = [CNTSettingsDataManager new];
+    CNTSettingsDataManager *dataManager = [CNTSettingsDataManager sharedManager];
     
     // Connecting
     self.view.presenter = presenter;
@@ -47,11 +47,19 @@
     self.presenter = presenter;
 }
 
-- (void)presentFromNavigationController:(UINavigationController *)navController
+- (void)presentFromViewController:(UIViewController *)viewController
 {
     //TOODO - New view controller presentation (present, push, pop, .. )
-    [navController pushViewController:self.view animated:YES];
+    [viewController presentViewController:self.view animated:YES completion:^{
+        //
+    }];
     
+}
+
+- (void)dismiss {
+    [self.view dismissViewControllerAnimated:YES completion:^{
+        //
+    }];
 }
 
 @end

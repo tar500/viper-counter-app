@@ -9,6 +9,8 @@
 
 @interface CNTSettingsWireframe : NSObject
 
-- (void)presentFromNavigationController:(UINavigationController *)navController;
+- (void)presentFromViewController:(UIViewController *)navController;
+
+- (void)dismiss;
 
 @end

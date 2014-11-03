@@ -7,6 +7,7 @@
 #import "CNTSettingsPresenter.h"
 
 @interface CNTSettingsViewController()
+@property (strong, nonatomic) IBOutlet UISwitch *displayNumbersAsWordsSwitch;
 
 @end
 
@@ -34,11 +35,26 @@
 
 /** PRESENTER -> VIEW methods */
 
+- (void)setDisplayNumbersAsWordsEnabled:(BOOL)enabled {
+    self.displayNumbersAsWordsSwitch.on = enabled;
+}
+
 
 #pragma mark - IB Actions
 
 /**
  * Connect interface builder actions here and pass them to the Presenter
  */
+
+- (IBAction)closeAction:(id)sender
+{
+    
+    [self.presenter requestClose];
+}
+
+- (IBAction)displayNumbersAsWordsSwitchValueChanged:(UISwitch *)sender
+{
+    [self.presenter changeDisplayNumbersAsWordsSettingValue:sender.isOn];
+}
 
 @end

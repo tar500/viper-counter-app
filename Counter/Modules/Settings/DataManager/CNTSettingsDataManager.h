@@ -7,4 +7,8 @@
 
 @interface CNTSettingsDataManager : NSObject
 
++ (instancetype)sharedManager;
+
+@property (nonatomic, assign) BOOL shouldDisplayNumbersAsWords;
+
 @end
