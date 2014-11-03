@@ -13,8 +13,6 @@
 
 @interface CNTCounterWireframe()
 @property (nonatomic, strong) CNTCounterPresenter *presenter;
-
-#warning add this
 @property (nonatomic, strong) CNTCounterViewController *view;
 @end
 

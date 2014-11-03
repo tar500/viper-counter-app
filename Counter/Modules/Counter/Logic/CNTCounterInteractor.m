@@ -6,7 +6,6 @@
 #import "CNTCounterInteractor.h"
 #import "CNTCounterDataManager.h"
 
-#warning Add this
 @interface CNTCounterInteractor()
 @property (nonatomic, assign)   NSUInteger  count;
 @end
