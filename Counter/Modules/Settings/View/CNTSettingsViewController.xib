@@ -31,7 +31,7 @@
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cs-DF-TFy">
                     <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                     <items>
-                        <navigationItem title="Title" id="vzh-GO-saw">
+                        <navigationItem title="Settings" id="vzh-GO-saw">
                             <barButtonItem key="leftBarButtonItem" title="Close" id="UFD-77-LHV">
                                 <connections>
                                     <action selector="closeAction:" destination="-1" id="arj-Su-Pxz"/>

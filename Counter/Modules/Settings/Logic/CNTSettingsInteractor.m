@@ -34,4 +34,8 @@
  * Implement this interactor private methods here
  */
 
+- (void)dealloc {
+    NSLog(@"Interactor dealloc");
+}
+
 @end

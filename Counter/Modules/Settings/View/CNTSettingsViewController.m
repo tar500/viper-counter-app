@@ -57,4 +57,8 @@
     [self.presenter changeDisplayNumbersAsWordsSettingValue:sender.isOn];
 }
 
+- (void)dealloc {
+    NSLog(@"ViewController dealloc");
+}
+
 @end

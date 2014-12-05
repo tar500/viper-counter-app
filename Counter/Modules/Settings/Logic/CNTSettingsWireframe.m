@@ -47,6 +47,12 @@
     self.presenter = presenter;
 }
 
+// Call this method in order to dealloc all of this module hierarchy
+- (void)disconnectDependencies {
+    self.view = nil;
+    self.presenter = nil;
+}
+
 - (void)presentFromViewController:(UIViewController *)viewController
 {
     //TOODO - New view controller presentation (present, push, pop, .. )
@@ -57,9 +63,16 @@
 }
 
 - (void)dismiss {
-    [self.view dismissViewControllerAnimated:YES completion:^{
-        //
+    
+    __weak typeof (self) weakSelf = self;
+    [self.view.presentingViewController dismissViewControllerAnimated:YES completion:^{
+        [self disconnectDependencies];
+        NSLog(@"View after dismiss %@", weakSelf.view);
     }];
+}
+
+- (void)dealloc {
+    NSLog(@"Wireframe dealloc");
 }
 
 @end

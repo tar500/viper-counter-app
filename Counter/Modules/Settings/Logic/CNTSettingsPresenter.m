@@ -54,4 +54,8 @@
  * Implement this presenter private methods here
  */
 
+- (void)dealloc {
+    NSLog(@"Presenter dealloc");
+}
+
 @end
